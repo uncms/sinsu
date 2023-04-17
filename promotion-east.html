@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXW59SC4L4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SXW59SC4L4');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="신수 테스트 [동양편], 내가 만약 상상의 동물이었다면?">
+    <meta name="keywords" content="신수, SINSU, NFT, 사방신, 청룡, 백호, 주작, 현무, P2E, 이더리움, 폴리곤, 클레이튼, 언커먼즈, UNCOMMONS, NFT 프로젝트, NFT 개발, 신수 테스트, 신수 MBTI, 상상의 동물 테스트, 상상의 동물 MBTI">
+
+    <meta property="og:title" content="신수 테스트 [동양편]">
+    <meta property="og:description" content="내가 만약 상상의 동물이었다면?">
+    <meta property="og:image" content="/img/promotion-east.jpg">
+
+    <meta name="twitter:card" content="summary"> 
+    <meta name="twitter:title" content="신수 테스트 [동양편]">  
+    <meta name="twitter:description" content="내가 만약 상상의 동물이었다면?">
+    <meta name="twitter:image" content="https://sinsu.world/img/promotion-east.jpg"> 
+    <meta name="twitter:site" content="@sinsuworld"> 
+    <meta name="twitter:creator" content="@sinsuworld"> 
+
+    <title>신수 테스트 [동양편]</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+    <link rel="manifest" href="/fav/site.webmanifest">
+    <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#c80c10">
+    <meta name="msapplication-TileColor" content="#c80c10">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+    <link rel="stylesheet" href="css/promotion.css">
+    <script defer src="js/promotion-east-data.js"></script>
+    <script defer src="js/promotion-east.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a class="logo" href="/">
+                <img src="img/logo_wl.png" alt="Logo">
+            </a>
+            <div class="community-wrapper">
+                <a href="https://twitter.com/sinsuworld">
+                    <img src="img/twitter_wl.png" alt="Twitter">
+                </a>
+                <a href="https://discord.gg/uhASzSS3Gh">
+                    <img src="img/discord_wl.png" alt="Discord">
+                </a>
+                <a href="https://www.youtube.com/@sinsuworld">
+                    <img src="img/youtube_wl.png" alt="YouTube">
+                </a>
+                <a href="https://opensea.io/collection/sinsu">
+                    <img src="img/opensea_wl.png" alt="OpenSea">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <p>내가 만약 <span>상상의 동물</span>이었다면?</p>
+        <div>
+            <p>신수 테스트 [동양편]</p>
+            <div></div>
+        </div>
+        <img src="img/promotion-east.jpg" alt="Main Image">
+        <button onclick="startTest()">🐲 시작하기<br><span>나는 구미호? 해태? 인면조?</span></button>
+    </section>
+
+    <section class="test">
+        <div class="test-num">
+            <p class="question-number"></p>
+            <div class="question-count"></div>
+        </div>
+        <p class="question-title"></p>
+        <div class="test-btn">
+            <button class="answer-1" onclick="moveQuestion(0)"></button>
+            <button class="answer-2" onclick="moveQuestion(1)"></button>
+        </div>
+    </section>
+
+    <section class="loading">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/loading_1.png" alt="Loading"></div>
+                <div class="swiper-slide"><img src="img/loading_2.png" alt="Loading"></div>
+                <div class="swiper-slide"><img src="img/loading_3.png" alt="Loading"></div>
+                <div class="swiper-slide"><img src="img/loading_4.png" alt="Loading"></div>
+                <div class="swiper-slide"><img src="img/loading_5.png" alt="Loading"></div>
+                <div class="swiper-slide"><img src="img/loading_6.png" alt="Loading"></div>
+                <div class="swiper-slide"><img src="img/loading_7.png" alt="Loading"></div>
+                <div class="swiper-slide"><img src="img/loading_8.png" alt="Loading"></div>
+            </div>
+        </div>
+        <p>나와 일치하는<br>신수를 찾는 중</p>
+        <p>3초 뒤 신수가 등장합니다!</p>>
+    </section>
+
+    <section class="result">
+        <p class="result-sub"></p>
+        <div class="result-main">
+            <p class="result-main-text"></p>
+            <div></div>
+        </div>
+        <img class="result-img" alt="NFT">
+        <div class="result-type"></div>
+        <div class="result-desc">
+            <div>
+                <div>👉</div>
+                <div class="result-desc-1"></div>
+            </div>
+            <div>
+                <div>👉</div>
+                <div class="result-desc-2"></div>
+            </div>
+            <div>
+                <div>👉</div>
+                <div class="result-desc-3"></div>
+            </div>
+            <div>
+                <div>👉</div>
+                <div class="result-desc-4"></div>
+            </div>
+        </div>
+        <a class="sinsuworld" href="/">🐲 더 많은 신수가 궁금하다면? 🦄</a>
+        <div class="promotion-title">🎉 나만의 신수 뽑기 EVENT 🎉</div>
+        <iframe width="100%" height="350" src="https://www.youtube.com/embed/o7P6001mj6g?controls=1&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="share-title">친구에게 결과 공유하기</div>
+        <div class="share-wrapper">
+            <img class="btn-link-share" src="img/link-share.png" alt="Link Share"></img>
+            <img class="btn-twitter-share" src="img/twitter-share.png" alt="Twitter Share"></img>
+            <img class="btn-facebook-share" src="img/facebook-share.png" alt="Facebook Share"></img>
+            <img onclick="shareKakao()" id ="btn-kakaotalk-share" src="img/kakaotalk-share.png" alt="Kakotalk Share"></img>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <a class="logo" href="#">
+                <img src="img/logo_gy.png" alt="Logo">
+            </a>
+            <div class="community-wrapper">
+                <a href="https://twitter.com/sinsuworld">
+                    <img src="img/twitter_gy.png" alt="Twitter">
+                </a>
+                <a href="https://discord.gg/uhASzSS3Gh">
+                    <img src="img/discord_gy.png" alt="Discord">
+                </a>
+                <a href="https://www.youtube.com/@sinsuworld">
+                    <img src="img/youtube_gy.png" alt="YouTube">
+                </a>
+                <a href="https://opensea.io/collection/sinsu">
+                    <img src="img/opensea_gy.png" alt="OpenSea">
+                </a>
+            </div>
+        </div>
+        <p>Copyright 2022-2023. SINSU All rights reserved.</p>
+    </footer>
+</body>
+</html>

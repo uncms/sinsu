@@ -1,0 +1,758 @@
+:root {
+    --color-highlight: #C80C10;
+
+    --color-black: #101010;
+    --color-black-light: #181818;
+    --color-black-lighter: #202020;
+
+    --color-white: #ffffff;
+}
+
+@font-face {
+    font-family: 'Binggrae-Two';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------------- 공통 영역 ---------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 360px;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color-black);
+    scroll-behavior: smooth;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+section{
+    max-width: 652px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title{
+    font-family: 'Binggrae-Two';
+    font-size: 24px;
+    color: var(--color-white);
+}
+
+.section-highlight{
+    position: absolute;
+    bottom: 0;
+    height: 8px;
+    background: var(--color-highlight);
+}
+
+/* ---------------- HEADER 영역 ---------------- */
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-width: 360px;
+    max-width: 652px;
+    background: var(--color-black);
+    padding-left: 16px;
+    padding-right: 16px;
+    z-index: 10;
+}
+
+header > div{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-highlight);
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.logo > img{
+    width: 60px;
+    height: 14px;
+}
+
+.community-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.community-wrapper > a{
+    padding: 6px;
+}
+
+.community-wrapper > a > img{
+    width: auto;
+    height: 18px;
+}
+
+.community-wrapper > a:nth-of-type(4) > img{
+    width: auto;
+    height: 20px;
+}
+
+nav{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav > a{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-white);
+    padding: 8px;
+    margin-right: 8px;
+}
+
+nav > a:nth-of-type(1){
+    margin-left: -8px;
+}
+
+nav > a:nth-of-type(6){
+    margin-right: 0px;
+}
+
+/* ---------------- HOME 영역 ---------------- */
+
+#home{
+    position: relative;
+    padding-top: 100px;
+    z-index: 6;
+}
+
+.home-overlay{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #101010, #10101000 50%);
+}
+
+.home-wrapper{
+    max-width: 652px;
+    min-height: 424px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background: url(/img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+}
+
+.hashtag{
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1;
+}
+
+.hashtag > div{
+    width: auto;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-highlight);
+    border: 1px solid var(--color-highlight);
+    border-radius: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 8px;
+}
+
+.home-wrapper > h1{
+    font-family: 'Binggrae-Two';
+    font-size: 48px;
+    color: var(--color-white);
+    margin-top: 8px;
+    margin-bottom: 16px;
+    z-index: 1;
+}
+
+.home-wrapper > p{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-white);
+    line-height: 150%;
+    z-index: 1;
+}
+
+/* ---------------- MBTI 영역 ---------------- */
+
+#mbti{
+    padding-top: 48px;
+    z-index: 7;
+}
+
+.mbti-wrapper{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 8px;    
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.mbti-wrapper > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    font-family: 'Binggrae-Two';
+    font-size: 14px;
+    color: var(--color-highlight);
+    text-align: center;
+    border: 1px solid var(--color-highlight);
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.mbti-wrapper > a:hover{
+    color: var(--color-white);
+    background-color: var(--color-highlight);
+}
+
+/* ---------------- STORY 영역 ---------------- */
+
+#story{
+    padding-top: 160px;
+    margin-top: -64px;
+    z-index: 5;
+}
+
+.story-wrapper{
+    width: 100%;
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.story-title{
+    position: relative;
+}
+
+.story-title > .section-highlight{
+    width: 100px;
+    left: -16px;
+    z-index: -1;
+}
+
+.story-content{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-white);
+    line-height: 150%;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    word-break: keep-all;
+}
+
+.btn-readmore{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-highlight);
+    background: none;
+    border: none;
+    padding: 8px;
+    margin-left: -8px;
+    cursor: pointer;
+}
+
+.readmore-close{
+    display: none;
+}
+
+/* ---------------- NFT 영역 ---------------- */
+
+#nft{
+    padding-top: 160px;
+    margin-top: -64px;
+    z-index: 4;
+}
+
+.nft-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.nft-title{
+    position: relative;
+}
+
+.nft-title > .section-highlight{
+    width: 78px;
+    margin-left: -16px;
+    z-index: -1;
+}
+
+.nft-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 8px;
+    row-gap: 8px;
+    margin-top: 48px;
+}
+
+.nft-character-wrapper{
+    width: 100%;
+    height: 100%;
+    display: none;
+    line-height: 0;
+    border-radius: 4px;
+    
+}
+
+.nft-character{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--color-black-light);
+    border: 1px solid var(--color-black-lighter);
+    cursor: pointer;
+    transition: 0.2s;
+    line-height: 0;
+    border-radius: 4px;
+    
+}
+
+.nft-character > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.nft-overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Binggrae-Two';
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-white);
+    text-align: center;
+    background: linear-gradient(180deg, #18181800 50%, #101010F2);
+    padding-bottom: 16px;
+    border-radius: 4px;
+}
+
+.nft-overlay > br{
+    display: none;
+}
+
+.nft-character:hover {
+    border: 1px solid var(--color-highlight);
+}
+
+.nft-character:hover > div{
+    background: linear-gradient(180deg, #C80C1000 50%, #C80C10);
+}
+
+.btn-loadmore{
+    width: 100%;
+    height: 48px;
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-highlight);
+    background: none;
+    border: 1px solid var(--color-highlight);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: 0.2s;
+}
+
+.btn-loadmore:hover{
+    color: var(--color-white);
+    background: var(--color-highlight);
+}
+
+/* ---------------- ROADMAP 영역 ---------------- */
+
+#roadmap{
+    padding-top: 160px;
+    margin-top: -64px;
+    z-index: 3;
+}
+
+.roadmap-wrapper{
+    width: 100%;
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.roadmap-title{
+    position: relative;
+}
+
+.roadmap-title > .section-highlight{
+    width: 100px;
+    left: -16px;
+    z-index: -1;
+}
+
+.roadmap-content{
+    margin-top: 64px;
+}
+
+.roadmap-items {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.roadmap-items::before {
+    position: absolute;
+    width: 2px;
+    height: calc(100% + 32px);
+    content: '';
+    margin-top: 8px;
+    background-color: var(--color-highlight);
+    left: 7px;
+    top: -24px;
+}
+
+.roadmap-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.roadmap-item:nth-child(odd),
+.roadmap-item:nth-child(even) {
+    padding-left: 32px;
+    text-align: left;
+}
+
+.roadmap-item:last-child {
+    margin-bottom: 0;
+}
+
+.roadmap-dot {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-black);
+    border: 2px solid var(--color-highlight);
+    border-radius: 50%;
+}
+
+.roadmap-phase {
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-highlight);
+}
+
+.roadmap-checklist {
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 150%;
+    color: var(--color-white);
+    margin-top: 8px;
+    word-break: keep-all;
+}
+
+/* ---------------- GAME 영역 ---------------- */
+
+#game{
+    padding-top: 160px;
+    margin-top: -48px;
+    z-index: 2;
+}
+
+.game-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.game-title{
+    position: relative;
+}
+
+.game-title > .section-highlight{
+    width: 78px;
+    margin-left: -16px;
+    z-index: -1;
+}
+
+.game-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: var(--color-black-light);
+    border: 1px solid var(--color-black-lighter);
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin-top: 48px;
+}
+
+.game-content > p{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.game-content > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 144px;
+    height: 48px;
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-highlight);
+    border: 1px solid var(--color-highlight);
+    border-radius: 24px;
+    transition: 0.2s;
+}
+
+.game-content > a:hover{
+    color: var(--color-white);
+    background: var(--color-highlight);
+    border: 1px solid var(--color-highlight);
+    border-radius: 24px;
+}
+
+/* ---------------- FAQ 영역 ---------------- */
+
+#faq{
+    padding-top: 160px;
+    margin-top: -64px;
+    z-index: 1;
+}
+
+.faq-wrapper{
+    width: 100%;
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.faq-title{
+    position: relative;
+}
+
+.faq-title > .section-highlight{
+    width: 84px;
+    left: -16px;
+    z-index: -1;
+}
+
+.faq-content{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 8px;
+    row-gap: 8px;
+    margin-top: 48px;
+}
+
+.faq-detail{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-black-light);
+    border: 1px solid var(--color-black-lighter);
+    border-radius: 4px;
+    padding: 32px 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.faq-detail > .question{
+    position: relative;
+    width: 100%;
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-white);
+    padding-right: 32px;
+    word-break: keep-all;
+    cursor: pointer;
+}
+
+.faq-detail > .answer{
+    position: relative;
+    width: 100%;
+    height: 0;
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 150%;
+    color: var(--color-white);
+    overflow: hidden;
+    overflow-y: hidden;
+    word-break: keep-all;
+}
+
+.faq-detail > .question::before{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    color: var(--color-white);
+    font-size: 16px;
+}
+
+.faq-detail.active{
+    border: 1px solid var(--color-highlight);
+}
+
+.faq-detail.active > .question::before{
+    content: '-';
+    color: var(--color-highlight);
+    font-weight: 700;
+}
+
+.faq-detail.active > .question{
+    color: var(--color-highlight);
+    font-weight: 700;
+}
+
+.faq-detail.active > .answer{
+    height: 100%;
+    margin-top: 16px;
+}
+
+/* ---------------- FOOTER 영역 ---------------- */
+
+footer{
+    width: 100%;
+    min-width: 360px;
+    max-width: 652px;
+    background: var(--color-black);
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 96px;
+    padding-bottom: 48px;
+}
+
+footer > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer > div > .logo{
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+footer > p{
+    font-family: 'Pretendard Variable', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 150%;
+    color: #606060;
+    margin-top: 16px;
+    word-break: keep-all;
+}
+
+@media screen and (max-width: 652px) {
+
+
+    /* ---------------- HOME 영역 ---------------- */
+
+    .home-overlay{
+        display: block;
+    }
+
+    /* ---------------- NFT 영역 ---------------- */
+
+    .nft-content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .nft-overlay > br{
+        display: block;
+    }
+}
